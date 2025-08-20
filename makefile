@@ -24,7 +24,7 @@ self-test: bin/$(app)
 
 .PHONY: run-examples
 run-examples: bin/$(app)
-	bash run-examples.sh
+	bash scripts/run-examples.sh
 
 bin/$(app): $(lib) lib/$(app).o
 	mkdir -p $(dir $@); $(cc) $^ $(ldflags) -o $@
